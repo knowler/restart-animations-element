@@ -1,7 +1,7 @@
 # Restart Animations Element
 
 A custom element for restarting animations on the page or for another
-element. This only works for animations that persist.
+element. This only works for animations that persist. [See a demo on CodePen](https://codepen.io/knowler/pen/QWYZYEv).
 
 ## Usage
 
