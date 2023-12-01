@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en-ca">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Restart Animations Element Demo</title>
+		<script type="module">
+			import { RestartAnimationsElement } from "./restart-animations-element.js";
+
+			RestartAnimationsElement.define();
+		</script>
+		<style>
+			* { box-sizing: border-box; }
+
+			body {
+				padding: 1rem;
+				margin: 0;
+			}
+
+			.box {
+				background-color: DeepPink;
+				aspect-ratio: 1;
+				block-size: 2rem;
+				animation: to-right 2s ease-in-out both;
+			}
+
+			@keyframes to-right {
+				to { translate: calc(100cqi - 100%) 0; }
+			}
+
+			#some-scope {
+				container: some-scope / inline-size;
+				border: 1px solid Black;
+				padding: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Restart Animations Element Demo</h1>
+		<restart-animations>Restart animations (for entire document)</restart-animations>
+		<div class="box"></div>
+		<restart-animations for="some-scope">Restart animations for following scope</restart-animations>
+		<div id="some-scope">
+			<div class="box"></div>
+		</div>
+	</body>
+</html>
