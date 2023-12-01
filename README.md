@@ -8,7 +8,7 @@ element. This only works for animations that persist.
 Here’s how to get it into your document and a few ways you can define it:
 
 ```js
-import { RestartAnimationsElement } from "./restart-animations-element.js";
+import { RestartAnimationsElement } from "https://esm.sh/gh/knowler/restart-animations-element/restart-animations-element.js?raw";
 
 // 1. Use the static method. Defines element `<restart-animations>`
 RestartAnimationsElement.define();
